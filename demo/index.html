@@ -1,0 +1,284 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PWP Washing Powder — freshness and cleaning for your everyday laundry.">
+  <title>PWP Washing Powder | Freshness Every Wash</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <header class="navbar">
+    <a href="#home" class="logo" aria-label="PWP Home">
+      <span class="logo-mark">PWP</span>
+      <span class="logo-text">WASHING POWDER</span>
+    </a>
+
+    <nav aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#products">Products</a>
+      <a href="#order">Order Now</a>
+    </nav>
+
+    <a href="#order" class="order-link">
+      My Order (<span id="cart-count">0</span>)
+    </a>
+  </header>
+
+  <main>
+    <!-- Hero section -->
+    <section class="hero" id="home">
+      <div class="hero-text">
+        <p class="eyebrow">WELCOME TO PWP</p>
+        <h1>A Fresh Start for <span>Every Wash.</span></h1>
+        <p class="hero-description">
+          Make laundry day feel fresh with PWP Washing Powder.
+          Choose your pack size and place your order easily.
+        </p>
+
+        <a href="#products" class="primary-btn">Explore Products</a>
+
+        <div class="hero-features">
+          <span>✓ Easy Ordering</span>
+          <span>✓ Two Pack Sizes</span>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-label="PWP brand illustration">
+        <div class="hero-circle">
+          <span class="hero-small-text">YOUR LAUNDRY PARTNER</span>
+          <span class="hero-brand">PWP</span>
+          <span class="hero-product-text">WASHING POWDER</span>
+          <span class="hero-sparkle">✦</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products -->
+    <section class="section products-section" id="products">
+      <div class="section-heading">
+        <p class="eyebrow">OUR PRODUCTS</p>
+        <h2>Choose Your Pack</h2>
+        <p>Select your preferred size and add it to your order.</p>
+      </div>
+
+      <div class="product-grid">
+        <!-- 500 g product -->
+        <article class="product-card">
+          <div class="product-image">
+            <span class="size-tag">500 g PACK</span>
+            <img
+              src="images/500g.jpg"
+              alt="PWP Washing Powder 500 gram pack"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="product-info">
+            <h3>PWP Washing Powder</h3>
+            <p class="product-description">
+              Convenient 500 g pack for your laundry needs.
+            </p>
+
+            <p class="product-price">Rs. 200</p>
+
+            <div class="quantity-row">
+              <span>Quantity</span>
+              <div class="quantity-control">
+                <button
+                  type="button"
+                  data-action="minus"
+                  data-id="500g"
+                  aria-label="Decrease 500 gram quantity"
+                >−</button>
+
+                <span id="qty-500g" aria-live="polite">0</span>
+
+                <button
+                  type="button"
+                  data-action="plus"
+                  data-id="500g"
+                  aria-label="Increase 500 gram quantity"
+                >+</button>
+              </div>
+            </div>
+
+            <button
+              type="button"
+              class="add-btn"
+              data-action="add"
+              data-id="500g"
+            >
+              Add 500 g to Order
+            </button>
+          </div>
+        </article>
+
+        <!-- 1 kg product -->
+        <article class="product-card">
+          <div class="product-image">
+            <span class="size-tag">1 KG PACK</span>
+            <img
+              src="images/1kg.jpg"
+              alt="PWP Washing Powder 1 kilogram pack"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="product-info">
+            <h3>PWP Washing Powder</h3>
+            <p class="product-description">
+              A larger 1 kg pack for your laundry needs.
+            </p>
+
+            <p class="product-price">Rs. 400</p>
+
+            <div class="quantity-row">
+              <span>Quantity</span>
+              <div class="quantity-control">
+                <button
+                  type="button"
+                  data-action="minus"
+                  data-id="1kg"
+                  aria-label="Decrease 1 kilogram quantity"
+                >−</button>
+
+                <span id="qty-1kg" aria-live="polite">0</span>
+
+                <button
+                  type="button"
+                  data-action="plus"
+                  data-id="1kg"
+                  aria-label="Increase 1 kilogram quantity"
+                >+</button>
+              </div>
+            </div>
+
+            <button
+              type="button"
+              class="add-btn"
+              data-action="add"
+              data-id="1kg"
+            >
+              Add 1 kg to Order
+            </button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Order and checkout -->
+    <section class="section checkout-section" id="order">
+      <div class="section-heading">
+        <p class="eyebrow">PLACE YOUR ORDER</p>
+        <h2>Your Shopping Cart</h2>
+        <p>Review your quantities and total before continuing to WhatsApp.</p>
+      </div>
+
+      <div class="checkout-layout">
+        <div class="checkout-card cart-card">
+          <h3>Order Summary</h3>
+
+          <div class="summary-row">
+            <span>500 g packs</span>
+            <span>
+              <span id="summary-500g-qty">0</span>
+              × Rs. 200
+            </span>
+            <strong id="summary-500g-total">Rs. 0</strong>
+          </div>
+
+          <div class="summary-row">
+            <span>1 kg packs</span>
+            <span>
+              <span id="summary-1kg-qty">0</span>
+              × Rs. 400
+            </span>
+            <strong id="summary-1kg-total">Rs. 0</strong>
+          </div>
+
+          <div class="summary-row grand-total">
+            <span>Total</span>
+            <strong id="grand-total">Rs. 0</strong>
+          </div>
+
+          <p id="cart-message" class="cart-message" aria-live="polite">
+            Your cart is empty. Add a product to get started.
+          </p>
+
+          <p class="info-note">
+            Delivery charges and payment arrangements can be confirmed
+            through WhatsApp.
+          </p>
+        </div>
+
+        <div class="checkout-card">
+          <h3>Customer Details</h3>
+
+          <form id="checkout-form">
+            <div class="form-group">
+              <label for="customer-name">Full Name</label>
+              <input
+                type="text"
+                id="customer-name"
+                name="name"
+                placeholder="Enter your full name"
+                autocomplete="name"
+                required
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="customer-phone">Phone Number</label>
+              <input
+                type="tel"
+                id="customer-phone"
+                name="phone"
+                placeholder="Enter your phone number"
+                autocomplete="tel"
+                inputmode="tel"
+                required
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="customer-address">Full Delivery Address</label>
+              <textarea
+                id="customer-address"
+                name="address"
+                placeholder="House number, street, area and city"
+                rows="4"
+                autocomplete="street-address"
+                required
+              ></textarea>
+            </div>
+
+            <p id="form-error" class="form-error" role="alert"></p>
+
+            <button type="submit" class="whatsapp-btn">
+              Continue to WhatsApp
+            </button>
+
+            <p class="privacy-note">
+              Your order details will be included in a WhatsApp message
+              for you to review and send.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <a href="#home" class="footer-logo">PWP</a>
+    <p>Freshness for your everyday laundry.</p>
+    <p>© <span id="current-year">2026</span> PWP Washing Powder.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
